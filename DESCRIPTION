@@ -1,0 +1,11 @@
+Package: bostonmarathonstats
+Title: Stats of Boston Marathons
+Version: 0.0.0.9000
+Authors@R: 
+    person("Nathan Ravi", "Medeiros Honorato", , "nathanhonorato@hotmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-5519-7926"))
+Description: This package provide information about runners who finish the Boston Marathon from 2009 to 2022.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
