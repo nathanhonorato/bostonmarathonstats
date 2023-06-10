@@ -11,6 +11,6 @@ boston_position <- function(gender, year, position) {
                     Year %in% year) |>
     dplyr:: select(Year, FullName, AgeOnRaceDay, Gender, CountryOfCtzName, OfficialTime, RankOverGender) |>
     dplyr::mutate(OfficialTime = lubridate::seconds_to_period(OfficialTime)) |>
-    dplyr::arrange(desc(Year)) |>
+    dplyr::arrange(dplyr::desc(Year)) |>
     janitor::clean_names()
 }
