@@ -4,7 +4,7 @@ boston_density_ridges <- function(year, range_position) {
     dplyr::filter(RankOverGender %in% range_position &
                     Year %in% year) |>
     dplyr::mutate(YearFct = fct_rev(as.factor(Year))) |>
-    ggplot2::ggplot(aes(y = YearFct)) +
+    ggplot2::ggplot(ggplot2::aes(y = YearFct)) +
     ggridges::geom_density_ridges(aes(x = OfficialTime, fill = Gender),
                                   alpha = .8, color = "white") +
     ggplot2::theme_bw() +
