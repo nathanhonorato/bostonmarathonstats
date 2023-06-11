@@ -1,0 +1,62 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# bostonmarathonstats <a href="https://github.com/nathanhonorato/bostonmarathonstats"><img src="man/figures/logo.png" align="right" height="138" /></a>
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+## Overview
+
+bostonmarathonstats provides an easy way to analyze data of runners that finished the Boston Marathon from 2009 to 2022.
+
+* `boston_summary()` summarises data of an year.
+* `boston_position` searches the athletes that finished in a certain position.
+* `boston_country` summarises data of a country.
+* `boston_athlete` searches results of an athlete.
+* `boston_density_ridges()` make a density plot of the amount of runners over the finishing time.
+
+## Installation
+
+You can install the development version of bostonmarathonstats from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("nathanhonorato/bostonmarathonstats")
+```
+
+## Examples
+
+This is a basic example of one of the functions of this package. `boston_summary` informs the numbers of finishers by gender of a certain year of event.
+
+```{r example}
+library(bostonmarathonstats)
+boston_summary(gender = "Female", year = 2021)
+```
+
+These are the first few rows of the database `results_boston` used in this package called. It has data about the runners such as gender, residence information and finishing time.
+
+```{r cars}
+head(results_boston, 5) |> 
+  knitr::kable()
+```
+
+This package also has the function `boston_density_ridges()` to make a density plot of finishing times:
+
+```{r pressure, echo = FALSE}
+boston_density_ridges(year = 2012:2019, 
+                      range_position = 1:10)
+```
