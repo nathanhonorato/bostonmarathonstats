@@ -13,8 +13,13 @@ URL: https://github.com/nathanhonorato/bostonmarathonstats
 BugReports: https://github.com/nathanhonorato/bostonmarathonstats/issues
 Imports: 
     dplyr,
+    forcats,
+    ggplot2,
+    ggridges,
     janitor,
-    lubridate
+    knitr,
+    lubridate,
+    stringr
 Depends: 
     R (>= 2.10)
 LazyData: true
